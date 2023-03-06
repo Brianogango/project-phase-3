@@ -1,0 +1,23 @@
+source "https://rubygems.org"
+
+# https://guides.rubyonrails.org/active_record_basics.html
+gem "activerecord", "~> 6.1"
+gem 'sinatra', '~> 3.0', '>= 3.0.5'
+gem "sinatra-activerecord"
+gem 'sinatra-cross_origin'
+gem "rake"
+gem "sqlite3", "~> 1.4"
+gem "require_all"
+gem "puma"
+gem "thin"
+gem "jwt"
+gem "bcrypt"
+gem 'rack-cors'
+
+
+
+# These gems will only be used when we are running the application locally
+group :development do
+  gem "pry"
+  gem "rerun"
+end
