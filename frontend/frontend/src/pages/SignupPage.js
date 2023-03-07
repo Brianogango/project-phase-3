@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 function SignupPage() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const navigate = useNavigate();
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -33,7 +34,7 @@ function SignupPage() {
 			})
 			.then((data) => {
 				// Handle successful signup
-				Navigate("/loginPage");
+				navigate("/loginPage");
 				console.log("Signup successful");
 			})
 			.catch((error) => {
